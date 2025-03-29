@@ -1,14 +1,7 @@
-CC = gcc
-CFLAGS = -Wall -lpthread
-TARGETS = process1 process2
+all: problem1
 
-all: $(TARGETS)
-
-process1: process1.c
-	$(CC) $(CFLAGS) -o process1 process1.c
-
-process2: process2.c
-	$(CC) $(CFLAGS) -o process2 process2.c
+problem1: problem1.c
+	gcc -o problem1 problem1.c
 
 clean:
-	rm -f $(TARGETS)
+	rm -f problem1
